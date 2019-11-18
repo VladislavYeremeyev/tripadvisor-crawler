@@ -2,6 +2,8 @@ import scrapy
 import json
 import re
 
+from bs4 import BeautifulSoup
+
 class RestaurantsSpider(scrapy.Spider):
     name = "restaurants"
 
@@ -18,21 +20,24 @@ class RestaurantsSpider(scrapy.Spider):
                 yield scrapy.Request(url=city["url"], callback=self.parse_restaurants_urls)
 
     def parse_restaurants_urls(self, response):
-        html = response.body.decode('utf-8')
+        html = response.body.decode("utf-8")
         restaurants_urls = re.findall(self.hrefs_pattern, html)
-
-        print(restaurants_urls)
-        print(len(restaurants_urls))
 
         for url in restaurants_urls:
             restaurant_url = self.home_url + url
-            print(restaurant_url)
             yield scrapy.Request(url=restaurant_url, callback=self.parse)
 
 
     def parse(self, response):
-        html = response.body.decode('utf-8')
+        html = response.body
+        soup = BeautifulSoup(html, "html.parser")
 
-        {
-            title: response.css("h1.ui_header::text").get()
+        yield {
+            "title": soup.find("h1", class_ = "ui_header").get_text(),
+            "rating": soup.find("span", class_ = "ui_bubble_rating").get("alt"),
+            "review_count": soup.find("span", class_ = "reviewCount").get_text(),
+            "street_adress": soup.find("span", class_ = "street-address").get_text(),
+            "locality": soup.find("span", class_ = "locality").get_text(),
+            "country_name": soup.find("span", class_ = "country-name").get_text(),
+            "phone_number": soup.find("span", class_ = "detail is-hidden-mobile").get_text()
         }

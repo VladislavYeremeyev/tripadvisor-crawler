@@ -4,7 +4,6 @@ import re
 
 from bs4 import BeautifulSoup
 
-
 class RestaurantsSpider(scrapy.Spider):
     name = "restaurants"
 
@@ -35,6 +34,7 @@ class RestaurantsSpider(scrapy.Spider):
         soup = BeautifulSoup(html, "html.parser")
 
         yield {
+            "url": response.url,
             "title": soup.find("h1", class_="ui_header").get_text(),
             "rating": soup.find("span", class_="ui_bubble_rating").get("alt"),
             "review_count": soup.find("span", class_="reviewCount").get_text(),

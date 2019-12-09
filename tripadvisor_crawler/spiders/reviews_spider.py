@@ -4,11 +4,11 @@ import re
 
 from bs4 import BeautifulSoup
 
-class FeedbacksSpider(scrapy.Spider):
-    name = "feedbacks"
+class ReviewsSpider(scrapy.Spider):
+    name = "reviews"
 
     restaurants_filename = "restaurants.json"
-    output_filename = "feed.json"
+    output_filename = "reviews.json"
     home_url = "https://www.tripadvisor.ru/"
 
     def start_requests(self):

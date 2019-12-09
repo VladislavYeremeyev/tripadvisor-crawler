@@ -4,7 +4,6 @@ import re
 
 from bs4 import BeautifulSoup
 
-
 class RestaurantsSpider(scrapy.Spider):
     name = "restaurants"
 

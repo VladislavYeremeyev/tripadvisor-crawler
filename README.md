@@ -25,5 +25,5 @@ scrapy runspider tripadvisor_crawler/spiders/restaurants_spider.py -t json -o - 
 - Парсинг данных об отзывах по каждому из ресторанов России в `json`-файл, используя список ресторанов, полученных на прошлом шаге:
 
 ```bash
-scrapy runspider tripadvisor_crawler/spiders/feedbacks_spider.py -t json -o - > feedbacks.json
+scrapy runspider tripadvisor_crawler/spiders/reviews_spider.py -t json -o - > reviews.json
 ```

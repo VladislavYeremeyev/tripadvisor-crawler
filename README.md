@@ -27,3 +27,8 @@ scrapy runspider tripadvisor_crawler/spiders/restaurants_spider.py -t json -o - 
 ```bash
 scrapy runspider tripadvisor_crawler/spiders/reviews_spider.py -t json -o - > reviews.json
 ```
+
+- Сбор статистики по ревью
+```bash
+python3 tripadvisor_crawler/statistics.py
+```

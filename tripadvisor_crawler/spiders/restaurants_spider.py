@@ -34,6 +34,15 @@ class RestaurantsSpider(scrapy.Spider):
         html = response.body
         soup = BeautifulSoup(html, "html.parser")
 
+        assessments = soup.find("div", class_="choices").find_all("div", class_="ui_checkbox item")
+        assessments_data = {}
+
+        for assessment in assessments:
+            metric_name = assessment.find("input").get("value") + "_star"
+            review_amount = assessment.find("span", class_="row_num").get_text()
+
+            assessments_data[metric_name] = review_amount
+
         yield {
             "url": response.url,
             "title": soup.find("h1", class_="ui_header").get_text(),
@@ -42,6 +51,7 @@ class RestaurantsSpider(scrapy.Spider):
             "street_adress": soup.find("span", class_="street-address").get_text(),
             "locality": soup.find("span", class_="locality").get_text(),
             "country_name": soup.find("span", class_="country-name").get_text(),
+            "assessments_info": assessments_data,
             "phone_number": soup.find(
                 "span", class_="detail is-hidden-mobile"
             ).get_text(),

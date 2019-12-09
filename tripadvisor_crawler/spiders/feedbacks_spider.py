@@ -57,7 +57,8 @@ class FeedbacksSpider(scrapy.Spider):
 
             yield reviews_data
 
-        next_page = self.home_url + response.css('.nav.next ::attr("href")').get()
+        next_page_href = response.css('.nav.next ::attr("href")').get() or None
 
-        if next_page is not None:
+        if next_page_href is not None:
+            next_page = self.home_url + next_page_href
             yield response.follow(next_page, self.parse)

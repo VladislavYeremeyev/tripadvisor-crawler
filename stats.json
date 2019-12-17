@@ -1,1 +1,83 @@
-[{"restaurant_url": "https://www.tripadvisor.ru//Restaurant_Review-g298515-d8735617-Reviews-Shustry_Shmel-Nizhny_Novgorod_Nizhny_Novgorod_Oblast_Volga_District.html", "reviews_count": 10, "reviews_5_stars_count": 6, "reviews_4_stars_count": 3, "reviews_3_stars_count": 0, "reviews_2_stars_count": 0, "reviews_1_stars_count": 1}, {"restaurant_url": "https://www.tripadvisor.ru//Restaurant_Review-g298515-d8735617-Reviews-or10-Shustry_Shmel-Nizhny_Novgorod_Nizhny_Novgorod_Oblast_Volga_District.html", "reviews_count": 10, "reviews_5_stars_count": 7, "reviews_4_stars_count": 0, "reviews_3_stars_count": 3, "reviews_2_stars_count": 0, "reviews_1_stars_count": 0}, {"restaurant_url": "https://www.tripadvisor.ru//Restaurant_Review-g298515-d8735617-Reviews-or20-Shustry_Shmel-Nizhny_Novgorod_Nizhny_Novgorod_Oblast_Volga_District.html", "reviews_count": 10, "reviews_5_stars_count": 8, "reviews_4_stars_count": 1, "reviews_3_stars_count": 0, "reviews_2_stars_count": 0, "reviews_1_stars_count": 1}, {"restaurant_url": "https://www.tripadvisor.ru//Restaurant_Review-g298515-d8735617-Reviews-or30-Shustry_Shmel-Nizhny_Novgorod_Nizhny_Novgorod_Oblast_Volga_District.html", "reviews_count": 10, "reviews_5_stars_count": 5, "reviews_4_stars_count": 3, "reviews_3_stars_count": 1, "reviews_2_stars_count": 0, "reviews_1_stars_count": 1}, {"restaurant_url": "https://www.tripadvisor.ru//Restaurant_Review-g298515-d8735617-Reviews-or40-Shustry_Shmel-Nizhny_Novgorod_Nizhny_Novgorod_Oblast_Volga_District.html", "reviews_count": 10, "reviews_5_stars_count": 4, "reviews_4_stars_count": 5, "reviews_3_stars_count": 0, "reviews_2_stars_count": 1, "reviews_1_stars_count": 0}, {"restaurant_url": "https://www.tripadvisor.ru//Restaurant_Review-g298515-d8735617-Reviews-or50-Shustry_Shmel-Nizhny_Novgorod_Nizhny_Novgorod_Oblast_Volga_District.html", "reviews_count": 10, "reviews_5_stars_count": 8, "reviews_4_stars_count": 1, "reviews_3_stars_count": 1, "reviews_2_stars_count": 0, "reviews_1_stars_count": 0}, {"restaurant_url": "https://www.tripadvisor.ru//Restaurant_Review-g298515-d8735617-Reviews-or60-Shustry_Shmel-Nizhny_Novgorod_Nizhny_Novgorod_Oblast_Volga_District.html", "reviews_count": 10, "reviews_5_stars_count": 7, "reviews_4_stars_count": 2, "reviews_3_stars_count": 1, "reviews_2_stars_count": 0, "reviews_1_stars_count": 0}, {"restaurant_url": "https://www.tripadvisor.ru//Restaurant_Review-g298515-d8735617-Reviews-or70-Shustry_Shmel-Nizhny_Novgorod_Nizhny_Novgorod_Oblast_Volga_District.html", "reviews_count": 10, "reviews_5_stars_count": 6, "reviews_4_stars_count": 3, "reviews_3_stars_count": 1, "reviews_2_stars_count": 0, "reviews_1_stars_count": 0}, {"restaurant_url": "https://www.tripadvisor.ru//Restaurant_Review-g298515-d8735617-Reviews-or80-Shustry_Shmel-Nizhny_Novgorod_Nizhny_Novgorod_Oblast_Volga_District.html", "reviews_count": 10, "reviews_5_stars_count": 9, "reviews_4_stars_count": 0, "reviews_3_stars_count": 0, "reviews_2_stars_count": 1, "reviews_1_stars_count": 0}, {"restaurant_url": "https://www.tripadvisor.ru//Restaurant_Review-g298515-d8735617-Reviews-or90-Shustry_Shmel-Nizhny_Novgorod_Nizhny_Novgorod_Oblast_Volga_District.html", "reviews_count": 10, "reviews_5_stars_count": 7, "reviews_4_stars_count": 1, "reviews_3_stars_count": 1, "reviews_2_stars_count": 0, "reviews_1_stars_count": 1}, {"restaurant_url": "https://www.tripadvisor.ru//Restaurant_Review-g298515-d8735617-Reviews-or100-Shustry_Shmel-Nizhny_Novgorod_Nizhny_Novgorod_Oblast_Volga_District.html", "reviews_count": 10, "reviews_5_stars_count": 7, "reviews_4_stars_count": 2, "reviews_3_stars_count": 0, "reviews_2_stars_count": 1, "reviews_1_stars_count": 0}]
+[
+    {
+        "restaurant_name": "\u0411\u0435\u043b\u043b\u0443\u0447\u0447\u0438",
+        "reviews_count": 141,
+        "reviews_5_stars_count": 97,
+        "reviews_4_stars_count": 26,
+        "reviews_3_stars_count": 10,
+        "reviews_2_stars_count": 1,
+        "reviews_1_stars_count": 7
+    },
+    {
+        "restaurant_name": "Dodici Wine & Kitchen",
+        "reviews_count": 180,
+        "reviews_5_stars_count": 141,
+        "reviews_4_stars_count": 16,
+        "reviews_3_stars_count": 12,
+        "reviews_2_stars_count": 1,
+        "reviews_1_stars_count": 10
+    },
+    {
+        "restaurant_name": "Julia Child Bistro",
+        "reviews_count": 130,
+        "reviews_5_stars_count": 109,
+        "reviews_4_stars_count": 12,
+        "reviews_3_stars_count": 7,
+        "reviews_2_stars_count": 2,
+        "reviews_1_stars_count": 0
+    },
+    {
+        "restaurant_name": "Dans Le Noir?",
+        "reviews_count": 734,
+        "reviews_5_stars_count": 635,
+        "reviews_4_stars_count": 51,
+        "reviews_3_stars_count": 27,
+        "reviews_2_stars_count": 13,
+        "reviews_1_stars_count": 8
+    },
+    {
+        "restaurant_name": "\u0427\u0443\u0447\u0432\u0430\u0440\u0430",
+        "reviews_count": 500,
+        "reviews_5_stars_count": 356,
+        "reviews_4_stars_count": 73,
+        "reviews_3_stars_count": 31,
+        "reviews_2_stars_count": 20,
+        "reviews_1_stars_count": 20
+    },
+    {
+        "restaurant_name": "\u0411\u0430\u0440 \u0434\u0430\u043a",
+        "reviews_count": 148,
+        "reviews_5_stars_count": 122,
+        "reviews_4_stars_count": 12,
+        "reviews_3_stars_count": 4,
+        "reviews_2_stars_count": 7,
+        "reviews_1_stars_count": 3
+    },
+    {
+        "restaurant_name": "\u0425\u043c\u0435\u043b\u0438 & \u0421\u0443\u043d\u0435\u043b\u0438",
+        "reviews_count": 1689,
+        "reviews_5_stars_count": 1248,
+        "reviews_4_stars_count": 261,
+        "reviews_3_stars_count": 98,
+        "reviews_2_stars_count": 51,
+        "reviews_1_stars_count": 31
+    },
+    {
+        "restaurant_name": "\u0421\u0442\u0435\u0439\u043a-\u0445\u0430\u0443\u0441 \"\u0420\u043e\u0439\u0441\"",
+        "reviews_count": 154,
+        "reviews_5_stars_count": 129,
+        "reviews_4_stars_count": 7,
+        "reviews_3_stars_count": 8,
+        "reviews_2_stars_count": 5,
+        "reviews_1_stars_count": 5
+    },
+    {
+        "restaurant_name": "Leffe Cafe",
+        "reviews_count": 61,
+        "reviews_5_stars_count": 58,
+        "reviews_4_stars_count": 1,
+        "reviews_3_stars_count": 2,
+        "reviews_2_stars_count": 0,
+        "reviews_1_stars_count": 0
+    }
+]

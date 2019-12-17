@@ -4,6 +4,7 @@ import re
 
 from bs4 import BeautifulSoup
 
+
 class RestaurantsSpider(scrapy.Spider):
     name = "restaurants"
 
@@ -33,7 +34,9 @@ class RestaurantsSpider(scrapy.Spider):
         html = response.body
         soup = BeautifulSoup(html, "html.parser")
 
-        assessments = soup.find("div", class_="choices").find_all("div", class_="ui_checkbox item")
+        assessments = soup.find("div", class_="choices").find_all(
+            "div", class_="ui_checkbox item"
+        )
         assessments_data = {}
 
         for assessment in assessments:

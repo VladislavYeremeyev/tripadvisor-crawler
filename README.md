@@ -29,6 +29,7 @@ scrapy runspider tripadvisor_crawler/spiders/reviews_spider.py -t json -o - > re
 ```
 
 - Сбор статистики по ревью
+
 ```bash
 python3 tripadvisor_crawler/statistics.py
 ```

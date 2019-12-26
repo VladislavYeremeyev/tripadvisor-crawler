@@ -34,18 +34,28 @@ class ReviewsSpider(scrapy.Spider):
                 if user_location_info
                 else ""
             )
+
+            restaurant_name = soup.find("h1", class_="ui_header")
+            url = review.select(".quote a")[0]
+            date = review.find("span", class_="ratingDate")
+            review_title = review.find("span", class_="noQuotes")
+            review_body = review.find("p", class_="partial_entry")
+            date_of_visit = review.find("div", class_="prw_reviews_stay_date_hsx")
+
             reviews_data.update(
                 {
-                    "restaurant_name": soup.find("h1", class_="ui_header").get_text(),
-                    "url": response.url,
+                    "restaurant_name": restaurant_name.get_text()
+                    if restaurant_name
+                    else "",
+                    "url": self.home_url + url["href"] or "",
                     "user_location": user_location,
-                    "username": user_info.get_text().replace(user_location, ""),
-                    "date": review.find("span", class_="ratingDate").get_text() or "",
-                    "review_title": review.find("span", class_="noQuotes").get_text(),
-                    "review_body": review.find("p", class_="partial_entry").get_text(),
-                    "date_of_visit": review.find(
-                        "div", class_="prw_reviews_stay_date_hsx"
-                    ).get_text(),
+                    "username": user_info.get_text().replace(user_location, "")
+                    if user_info and user_info.get_text()
+                    else "",
+                    "date": date.get_text() if date else "",
+                    "review_title": review_title.get_text() if review_title else "",
+                    "review_body": "",
+                    "date_of_visit": date_of_visit.get_text() if date_of_visit else "",
                 }
             )
 
@@ -65,10 +75,40 @@ class ReviewsSpider(scrapy.Spider):
                 if review.find("span", class_=f"bubble_{x}0"):
                     reviews_data.update({"stars_amount": x})
 
-            yield reviews_data
+            if review_body and "...Еще" in review_body.get_text():
+                yield scrapy.Request(
+                    url=self.home_url + url["href"],
+                    callback=self.parse_full,
+                    meta=reviews_data,
+                )
+            else:
+                reviews_data.update(
+                    {"review_body": review_body.get_text() if review_body else ""}
+                )
+                yield reviews_data
 
         next_page_href = response.css('.nav.next ::attr("href")').get() or None
 
         if next_page_href is not None:
             next_page = self.home_url + next_page_href
             yield response.follow(next_page, self.parse)
+
+    def parse_full(self, response):
+        html = response.body
+        soup = BeautifulSoup(html, "html.parser")
+        key_list = [
+            "restaurant_name",
+            "url",
+            "user_location",
+            "username",
+            "date",
+            "review_title",
+            "review_body",
+            "date_of_visit",
+            "reviews_by_user_amount",
+            "review_likes_amount",
+            "stars_amount",
+        ]
+        meta = {key: response.meta.copy()[key] for key in key_list}
+        meta.update({"review_body": soup.find("p", class_="partial_entry").get_text()})
+        yield meta

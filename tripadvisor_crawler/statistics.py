@@ -57,4 +57,4 @@ with open("./reviews.json", "r") as reviews_file:
     ]
 
 with open("./stats.json", "w") as fout:
-    json.dump(stats, fout)
+    json.dump(stats, fout, ensure_ascii=False)

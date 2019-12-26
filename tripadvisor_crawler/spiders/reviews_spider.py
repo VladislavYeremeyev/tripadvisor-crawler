@@ -109,6 +109,9 @@ class ReviewsSpider(scrapy.Spider):
             "review_likes_amount",
             "stars_amount",
         ]
-        meta = {key: response.meta.copy()[key] for key in key_list}
-        meta.update({"review_body": soup.find("p", class_="partial_entry").get_text()})
-        yield meta
+        meta_copy = response.meta.copy()
+        result = {key: meta_copy[key] for key in key_list}
+        result.update(
+            {"review_body": soup.find("p", class_="partial_entry").get_text()}
+        )
+        yield result
